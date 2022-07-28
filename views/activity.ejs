@@ -1,0 +1,33 @@
+
+<a class= "back_to_main" href="/">back to main list</a>
+
+<h1>  <%= ACTIVITY %> </h1>
+<div class="card">   
+      <ul>
+     <%  for(var i=0;i<CATEGORIES.length;i++){   %>
+     <form action="/delete" method="post">
+     <li> <input type="checkbox" class="checkbox" onChange="this.form.submit()" value="<%= CATEGORIES[i]._id %>"  name="checkbox"><%= CATEGORIES[i].name %></li>
+     <%  }   %>
+     <input type="hidden" name="list_name" value="<%= ACTIVITY.replace(/\s+/g,'_') %>">
+      </form>
+      </ul>
+      
+      <% var link = "/" + ACTIVITY.replace(/\s+/g,'_') %> 
+      <form action= <%= link %>    method = "post">
+            <input type="text" id="food_add" placeholder= "make a list on this" name="item" class="text">
+            <button type="submit">+</button>
+            </form>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+
+   $(document).on("change", "input[type='checkbox']", function () {
+      $(this).parent()[this.checked ? "addClass" : "removeClass"]("line_overthrough");
+   });
+   
+</script>
+
+
+

@@ -1,0 +1,29 @@
+<h1><%=DAY%></h1>
+<form action="/"   method = "post"  class="add_a_list">
+  <input type="text" id="add_a_list" placeholder= "Add a to-do list" name="add_a_list" class="text">
+  <button type="submit">+</button>
+  </form>
+
+
+<div class="container">
+<% for(var i=0;i<CATEGORIES.length;i++){   %>
+<%  if(i%3 == 0){ %>
+ <div class="row"> 
+<%  } %>
+
+ <div class="col-sm-4">
+  <form action="/delete/list" method="post">
+  <% var link = "/" +CATEGORIES[i].title.replace(/\s+/g,'_') ; %> 
+  <div class="shadow-lg bg-white rounded"> <input type="checkbox" class="checkbox" name="checkbox" onChange="this.form.submit()" value="<%= CATEGORIES[i]._id %>"><a class="nav-link"  href=<%= link %> > <%= CATEGORIES[i].title %>  </a></div>
+
+</form>
+</div>
+
+<% if(i%3 == 2 || i == CATEGORIES.length - 1){ %>
+  </div>
+<% } %>
+<%  }  %>
+</div>    
+
+
+

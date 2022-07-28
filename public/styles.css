@@ -1,0 +1,109 @@
+body {
+    background-image:-webkit-linear-gradient(45deg, #0078AA 50%, #51b1e1 50%);
+    background-repeat: no-repeat;
+    height: 70rem;
+    text-align:center;
+}
+
+h1,h2 {
+margin:auto;
+width:30%;
+background-color: #0078AA;
+color: white ;
+margin-bottom: 1rem;
+margin-top:5rem;
+}
+
+.card {
+    margin:auto;
+    margin-top:0rem;
+    width:30%;
+    background-color:azure;
+    color:black;
+    box-shadow: 0 14px 20px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+ul{
+    list-style-type: none;
+    padding-left:0;
+    margin-bottom: 0;
+}
+
+ul li {
+    border-bottom: 1px solid rgb(97, 92, 92);
+    margin-bottom:1rem;
+    margin-top: 1rem;
+    text-align: left;
+    padding-left:4rem;
+}
+
+a:hover {
+background-color: #007bff;
+color:white;
+}
+
+li:last-child{
+ margin-bottom:0;
+}
+
+input.text {
+margin: 0;
+width:93%;
+}
+
+input.checkbox{
+ margin-right: 1rem;
+}
+
+form{
+ padding:0;
+ margin:0;
+}
+
+form.add_a_list{
+ width: 30%;
+ margin:auto;
+}
+
+button {
+  border-radius: 50%;
+  background-color: #0078AA;
+  border:none;
+  color:aliceblue;
+}
+
+.close {
+    cursor:alias;
+}
+
+
+.container{
+margin-top:7rem;
+}
+
+.container .row {
+  margin-bottom:1.5rem;
+  font-weight: 800;
+}
+
+@media (max-width:1000px) {
+    form.add_a_list,h1{
+    width:80%;
+    }
+    
+    .card {
+      width:70%;
+    }
+}
+
+
+.line_overthrough{
+	text-decoration: line-through;	
+}
+
+
+a.back_to_main {
+ background-color: aliceblue;
+ color:#007bff;
+}
