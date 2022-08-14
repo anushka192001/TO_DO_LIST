@@ -100,7 +100,7 @@ app.post("/:listTitle",function(req,res){
     }
    });
    
-   LISTS.findOneAndUpdate({title:list_name},{$pull: {items: {_id: checked_item_id}}},function(error,found_list){
+   LISTS.findOneAndUpdate({title:list_name.replace(/_/g,' ')},{$pull: {items: {_id: checked_item_id}}},function(error,found_list){
     if(!error){
      console.log("successfully removed");
     }
